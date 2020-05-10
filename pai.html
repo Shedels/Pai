@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style >
+		
+		h1 { text-transform: uppercase }
+
+	</style>
+</head>
+
+<body>
+<h1> Kalkulator </h1>
+<label for ="a"> Podaj pierwsze a = </label> <input type="number" id = "a">
+<br>
+<label for ="a"> Podaj pierwsze b = </label> <input type="number" id = "b">
+<br> 
+<label for ="a"> Podaj pierwsze c = </label> <input type="number" id = "c">
+<br>
+
+
+<input type="button" value="dodawanie" onclick="suma()"> 
+
+<input type="button" value="odejmuj" onclick="odejm()" > 
+
+<input type="button" value="dziel" onclick="dziel()"> 
+
+<input type="button" value="mnozenie" onclick="mnoz()">
+
+<input type="button" value="szrednie" onclick="sr()">
+
+<div id="wynnik" style="margin-top: 20px"></div>
+
+<script > 
+	function suma()
+	{
+		var a = document.getElementById('a').value;
+		var b = document.getElementById('b').value; 
+		var c = document.getElementById('c').value; 
+		if (a == "" || b == "" || c =="")
+
+		{
+			document.getElementById('wynnik').innerHTML = "Uzupelnicz liczby.";
+
+		}
+		else
+		{
+			a = parseFloat(a);
+			b = parseFloat(b);
+			c = parseFloat(c);
+			var suma = a + b + c ;
+			document.getElementById('wynnik').innerHTML = "wynnik dziallanie wynoszi = " + suma;
+
+		}
+	}
+	//////////////////////////////////
+	function dziel()
+	{
+		var a = document.getElementById('a').value;
+		var b = document.getElementById('b').value; 
+		var c = document.getElementById('c').value; 
+		if (a == "" || b == "" || c =="")
+
+		{
+			document.getElementById('wynnik').innerHTML = "nie mozna na 0.";
+
+		}
+
+		else
+		{
+			
+			a = parseFloat(a);
+			b = parseFloat(b);
+			c = parseFloat(c);
+			var suma = a / b ;
+			
+			document.getElementById('wynnik').innerHTML = "wynnik dziallanie wynoszi = " + suma;
+			
+		}
+
+
+	}
+	/////////////////////////////
+function odejm()
+	{
+		var a = document.getElementById('a').value;
+		var b = document.getElementById('b').value;
+		var c = document.getElementById('c').value; 
+		if (a == "" || b == "" || c =="")
+
+		{
+			document.getElementById('wynnik').innerHTML = "Uzupelnicz liczby.";
+
+		}
+		else
+		{
+			a = parseFloat(a);
+			b = parseFloat(b);
+			c = parseFloat(c);
+			var suma = a - b - c;
+			document.getElementById('wynnik').innerHTML = "wynnik dziallanie wynoszi = " + suma;
+
+		}
+	}
+	////////////////////////////
+		function mnoz()
+		{
+			var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+			var c = document.getElementById('c').value; 
+			if (a == "" || b == "" || c =="" )
+
+			{
+				document.getElementById('wynnik').innerHTML = "Uzupelnicz liczby.";
+
+			}
+			else
+			{
+				a = parseFloat(a);
+				b = parseFloat(b);
+				c = parseFloat(c);
+				var suma = a * b * c;
+				document.getElementById('wynnik').innerHTML = "wynnik dziallanie wynoszi = " + suma;
+
+			}
+}
+			///////////////
+			function sr()
+		{
+			var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+			var c = document.getElementById('c').value; 
+			if (a == "" || b == "" || c =="" )
+
+			{
+				document.getElementById('wynnik').innerHTML = "Uzupelnicz liczby.";
+
+			}
+			else
+			{
+				a = parseFloat(a);
+				b = parseFloat(b);
+				c = parseFloat(c);
+				var suma = a + b + c;
+				var sr = suma / 3;
+				document.getElementById('wynnik').innerHTML = "wynnik dziallanie wynoszi = " + sr;
+
+			}
+		}
+		
+	
+
+
+</script>
+
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
